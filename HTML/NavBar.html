@@ -1,0 +1,66 @@
+    <header id="header">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Imago</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider" role="separator"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">Issues <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider" role="separator"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li><a href="#" id="createissuehref" data-toggle="modal" data-target="#create-modal">Create</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                <form class="navbar-form" id="search-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search"  id="searchterm" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+                </form>   
+            </li>
+            <li><a href="../navbar/">Help</a></li>
+            <!--<li class="active"><a href="./">Admin<span class="sr-only">(current)</span></a></li> -->
+            <?php
+                If ($user_name == '') {
+                    echo '<li><a href="#" id="loginform" data-toggle="modal" data-target="#login-modal">Login</a>'; 
+                } ELSE {
+                    echo '<li><a href="#" id="logoutform" data-toggle="modal" data-target="#logout-modal">Logout</a>';   
+                }
+            ?>
+            </li> <!-- end login -->       
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+  </nav>
+  </header>
